@@ -16,7 +16,9 @@ set(SOURCES
     main.cpp)
 set(HEADERS
     mark.h
-    PDA.h)
+    PDA.h
+    trajectory.h
+    kalman.h)
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 
