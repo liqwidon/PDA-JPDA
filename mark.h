@@ -1,5 +1,6 @@
 #ifndef MARK_H
 #define MARK_H
+
 #include <array>
 #include <Eigen/Dense>
 

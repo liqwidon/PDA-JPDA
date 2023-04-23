@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(PDA LANGUAGES CXX)
+project(JPDA LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -13,7 +13,11 @@ find_package(Boost REQUIRED)
 include_directories(${Boost_INCLUDE_DIRS})
 
 set(SOURCES
-    main.cpp)
+    main.cpp
+    trajectory.cpp
+    kalman.cpp
+    PDA.cpp)
+
 set(HEADERS
     mark.h
     PDA.h
@@ -24,5 +28,5 @@ add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 
 target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
 
-install(TARGETS PDA
+install(TARGETS JPDA
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
